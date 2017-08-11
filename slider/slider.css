@@ -1,0 +1,192 @@
+html
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#slider-soysano
+{
+    background-color: #000;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+#slider-soysano-bar-container
+{
+    height: 1em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+#slider-soysano-bar
+{
+    background-color: rgba(255,255,255,0.25);
+    height: 1em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0%;
+}
+#slider-soysano-slide
+{
+    animation-fill-mode:both;
+    background-image: url(http://media.salemwebnetwork.com/cms/IB/30491-bible-table-sized.400w.tn.jpg);
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+#slider-soysano-slide-text
+{
+    bottom: 4em;
+    left: 10%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+}
+#slider-soysano-navigation-container
+{
+    bottom: 0;
+    height: 1.5em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+.slider-soysano-button-container:first-of-type
+{
+    margin-left: 0;
+}
+.slider-soysano-button-container
+{
+    display: inline-block;
+    height: 1em;
+    margin-left: 0.125em;
+    margin-right: 0.125em;
+    position: relative;
+    width: 1em;
+}
+.slider-soysano-button-container:last-of-type
+{
+    margin-right: 0;
+}
+.slider-soysano-button
+{
+    animation-fill-mode:both;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+}
+.slider-soysano-button-sombra
+{
+    box-shadow:inset 0 0 3px 2px #09f;
+}
+.desaparicion-clase
+{
+  animation-name:desaparicion;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+}
+.aparicion-clase
+{
+  animation-name:aparicion;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+}
+
+@keyframes desaparicion
+{
+  0%
+  {
+    opacity:1;
+    transform:rotateY(0deg);
+  }
+  25%
+  {
+    opacity:0.75;
+    transform:rotateY(180deg);
+  }
+  50%
+  {
+    opacity: 0.5;
+    transform:rotateY(540deg);
+  }
+  100%
+  {
+    opacity: 0;
+    transform:rotateY(1440deg);
+  }
+}
+
+@keyframes aparicion
+{
+  0%
+  {
+    opacity: 0;
+    transform:rotateY(0deg);
+  }
+  50%
+  {
+    opacity: 0.5;
+    transform:rotateY(900deg);
+  }
+  75%
+  {
+    opacity: 0.75;
+    transform:rotateY(1260deg);
+  }
+  100%
+  {
+    opacity: 1;
+    transform:rotateY(1440deg);
+  }
+}
+.quitar-sombra-clase
+{
+  animation-name:quitar-sombra;
+  animation-duration:1s;
+  animation-timing-function:linear;
+}
+.aplicar-sombra-clase
+{
+  animation-name:aplicar-sombra;
+}
+@keyframes quitar-sombra
+{
+  0%
+  {
+    box-shadow:inset 0 0 3px 2px #09f; 
+  }
+  100%
+  {
+    box-shadow:inset 0 0 0 0 #09f;
+  }
+}
+@keyframes aplicar-sombra
+{
+  0%
+  {
+    box-shadow:inset 0 0 0 0 #09f;
+  }
+  100%
+  {
+    box-shadow:inset 0 0 3px 2px #09f; 
+  }
+}
